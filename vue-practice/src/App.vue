@@ -1,50 +1,51 @@
 <template>
-  <!-- has to have only one element inside, adding an extra div will cause error -->
   <div id="app">
-    <Todos />
-    <!-- Todos component -->
+    <Header />
+    <Content />
   </div>
 </template>
 
+
 <script>
-import Todos from "./components/Todos";
+import Header from "./components/Header";
+import Content from "./components/Content"
+
 export default {
-  name: "app",
+  name: "Vue App",
   components: {
-    Todos
+    Header, Content
   },
-  data() {
+  data() { 
     return {
-      todo: [
-        {
-          id: 1,
-          title: "Todo One",
-          completed: false
-        },
-        {
-          id: 2,
-          title: "Todo Two",
-          completed: true
-        },
-        {
-          id: 3,
-          title: "Todo False",
-          completed: false
-        }
-      ]
-    };
+
+    }
   }
 };
 </script>
 
+
+
+
 <style>
+@import url("https://fonts.googleapis.com/css?family=Maven+Pro&display=swap");
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Maven Pro", sans-serif;
   line-height: 1.4;
+}
+body::after {
+  content: "";
+  background: url("https://bit.ly/2QfHrHi") right top;
+  opacity: 0.7;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
 }
 </style>
