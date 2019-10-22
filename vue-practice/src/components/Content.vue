@@ -14,8 +14,8 @@
         />
       </transition>
       <ul>
-        <li v-for="infos in info" v-bind:key="infos">
-          <span style="color: #094356;">&diams;</span>
+        <li v-for="infos in eiffel_info" v-bind:key="infos">
+          <span style="color: #fff;">&diams;</span>
           {{infos}}
         </li>
       </ul>
@@ -29,7 +29,7 @@
       />
       <ul>
         <li v-for="infos in santa_info" v-bind:key="infos">
-          <span style="color: #172507;">&starf;</span>
+          <span style="color: #fff;">&starf;</span>
           {{infos}}
         </li>
       </ul>
@@ -43,7 +43,7 @@
 
 <script>
 import eiffel_tower from "../assets/eiffel_tower.jpeg";
-import santa_maddalena from "../assets/santa_maddalena.jpg";
+import santa_maddalena from "../assets/santa_maddalena.png";
 
 export default {
   name: "Content",
@@ -52,11 +52,11 @@ export default {
       hover: true,
       eiffel_tower: eiffel_tower,
       santa_maddalena: santa_maddalena,
-      eiffel_width: "55",
+      eiffel_width: "65",
       santa_width: "65",
-      info: [
+      eiffel_info: [
         "Eifell Tower",
-        "Constructed 1887-1889",
+        "Built 1887-1889",
         "Located in Paris",
         "Height: 1063ft"
       ],
@@ -69,40 +69,35 @@ export default {
 <style scoped>
 .column-layout {
   display: flex;
-  margin: 40px auto 0 auto;
+  margin: 40px 20px 0 20px;
   justify-content: space-between;
 }
 .sidebars {
   width: 30%;
   padding: 20px;
   box-sizing: border-box;
-  position: relative;
-  -webkit-box-shadow: 7px 7px 5px 0px rgba(82, 77, 82, 1);
-  -moz-box-shadow: 7px 7px 5px 0px rgba(82, 77, 82, 1);
-  box-shadow: 7px 7px 5px 0px rgba(82, 77, 82, 1);
-}
-img.eiffel,
-img.maddalena {
-  position: absolute;
-  margin: auto;
+  -webkit-box-shadow: 8px 10px 10px 0px rgba(112, 112, 112, 1);
+  -moz-box-shadow: 8px 10px 10px 0px rgba(112, 112, 112, 1);
+  box-shadow: 8px 10px 10px 0px rgba(112, 112, 112, 1);
 }
 
 .sidebars:nth-child(1) {
   /* background-color: rgba(197, 224, 220, 0.5); */
-  background-color: rgba(107, 83, 78, 0.5);
+  background-color: rgba(107, 83, 78, 0.3);
 }
 .sidebars:nth-child(2) {
   /* background-color: rgba(248, 231, 201, 0.5); */
-  background-color: rgba(107, 83, 78, 0.5);
+  background-color: rgba(107, 83, 78, 0.3);
 }
 .sidebars:nth-child(3) {
   /* background-color: rgba(160, 116, 225, 0.1); */
-  background-color: rgba(107, 83, 78, 0.5);
+  background-color: rgba(107, 83, 78, 0.3);
 }
 
 ul {
   float: right;
-  color: #f8ecc9;
+  /* color: #f8ecc9; */
+  color: #172557;
   list-style-type: none;
 }
 
