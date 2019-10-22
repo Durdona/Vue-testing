@@ -14,11 +14,6 @@ export default {
   name: "Vue App",
   components: {
     Header, Content
-  },
-  data() { 
-    return {
-
-    }
   }
 };
 </script>

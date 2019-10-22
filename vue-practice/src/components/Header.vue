@@ -1,7 +1,7 @@
 <template>
   <header class="header">
     <a href="#" class="logo">
-      <img :src="require('../assets/logo.png')" :alt="logo" />
+      <img :src="require('../assets/logo.png')" :alt="logo" /> 
     </a>
     <p>The sky was cloudless and of a deep dark blue...</p>
     <nav role="navigation">
