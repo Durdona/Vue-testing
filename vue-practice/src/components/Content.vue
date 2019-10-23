@@ -15,10 +15,11 @@
       </transition>
       <ul>
         <li v-for="infos in eiffel_info" v-bind:key="infos">
-          <span style="color: #fff;">&diams;</span>
+          <span style="color: navy">&diams;</span>
           {{infos}}
         </li>
       </ul>
+      <h3>Paris Eifell Tower</h3>
     </div>
     <div class="sidebars">
       <img
@@ -29,13 +30,20 @@
       />
       <ul>
         <li v-for="infos in santa_info" v-bind:key="infos">
-          <span style="color: #fff;">&starf;</span>
+          <span style="color: green;">&starf;</span>
           {{infos}}
         </li>
       </ul>
+      <h3>Italy Santa Maddalena</h3>
     </div>
     <div class="sidebars">
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa dignissimos velit dolor, esse quas vero quos? Non quis in necessitatibus, fuga sunt ea. Quia consectetur eius voluptatem quasi, totam voluptates. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum blanditiis adipisci quaerat saepe earum aliquid labore corrupti fuga fugit facilis alias assumenda commodi accusantium iste, maxime, id debitis, unde temporibus! Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus perferendis veniam officiis repellat voluptas laboriosam cupiditate provident rem dolores fugit quia eos consequatur, pariatur, deleniti totam ratione quis! Maiores, similique! Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, nisi. Dicta itaque, nesciunt tenetur quae repudiandae debitis laboriosam dolores dolor tempore quisquam. Corrupti itaque expedita hic corporis asperiores facere maiores.</p>
+      <h3>{{header}}</h3>
+      <p>{{reversed}}</p>
+      <p>{{reversed.split('').reverse().join('')}}</p>
+      <h4>Attribute Binding</h4>
+      <ul>
+        <li v-for="list in binding" v-bind:key="list"><span style="color: navy">&diams; </span>{{list}}</li>
+      </ul>
     </div>
   </div>
 </template>
@@ -60,7 +68,17 @@ export default {
         "Located in Paris",
         "Height: 1063ft"
       ],
-      santa_info: ["Santa Maddalena", "Located in Italy", "Tiny Town Duloc"]
+      santa_info: ["Santa Maddalena", "Located in Italy", "Tiny Town Duloc"],
+      header: "Reversed Sentence",
+      reversed: "Today is Tuesday... Learning Vue JS is interesting",
+      binding: [
+        ":alt='description'",
+        ":href='url'",
+        ":title='toolTip'",
+        ":calss='isActive'",
+        ":style='isStyled'",
+        ":disabled='isDisabled'"
+      ]
     };
   }
 };
@@ -82,28 +100,27 @@ export default {
 }
 
 .sidebars:nth-child(1) {
-  /* background-color: rgba(197, 224, 220, 0.5); */
-  background-color: rgba(107, 83, 78, 0.3);
+  background-color: rgba(177, 83, 78, 0.1);
 }
 .sidebars:nth-child(2) {
-  /* background-color: rgba(248, 231, 201, 0.5); */
-  background-color: rgba(107, 83, 78, 0.3);
+  background-color: rgba(177, 83, 78, 0.1);
 }
 .sidebars:nth-child(3) {
-  /* background-color: rgba(160, 116, 225, 0.1); */
-  background-color: rgba(107, 83, 78, 0.3);
+  background-color: rgba(177, 83, 78, 0.1);
 }
 
 ul {
   float: right;
-  /* color: #f8ecc9; */
   color: #172557;
   list-style-type: none;
+}
+h4 {
+  text-align: center;
 }
 
 /* Vue Animation  */
 .fade-enter {
-  opacity: 0;
+  opacity: 0.8;
 }
 .fade-enter-active {
   transition: opacity 1s;
@@ -113,6 +130,6 @@ ul {
 }
 .fade-leave-active {
   transition: opacity 1s;
-  opacity: 0;
+  opacity: 0.2;
 }
 </style>
